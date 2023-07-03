@@ -7,7 +7,7 @@ window.addEventListener('scroll', function () {
   if (visibleSection) {
     var sectionId = visibleSection.id;
     
-    var url = window.location.href + '#' + sectionId;
+    var url = window.location.href.split('#')[0] + '#' + sectionId;
     window.history.replaceState(null, null, url);
   }
 });
