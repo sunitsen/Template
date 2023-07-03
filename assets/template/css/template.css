@@ -1,0 +1,11 @@
+body {
+  margin: o;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  background: green;
+  margin-block: 5rem;
+  height: 60vh;
+}
