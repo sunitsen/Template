@@ -9,7 +9,7 @@ window.addEventListener('scroll', function () {
 
     var currentURL = window.location.href;
     var hashIndex = currentURL.indexOf('#');
-    var urlWithoutSectionId = currentURL.substring(0, hashIndex);
+    var urlWithoutSectionId = currentURL.substring(0, hashIndex !== -1 ? hashIndex : currentURL.length);
     var url = urlWithoutSectionId + '#' + sectionId;
     
     window.history.replaceState(null, null, url);
