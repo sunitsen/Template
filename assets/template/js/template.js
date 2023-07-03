@@ -7,7 +7,11 @@ window.addEventListener('scroll', function () {
   if (visibleSection) {
     var sectionId = visibleSection.id;
 
-    var url = window.location.pathname + '#' + sectionId;
+    var currentURL = window.location.href;
+    var hashIndex = currentURL.indexOf('#');
+    var urlWithoutSectionId = currentURL.substring(0, hashIndex);
+    var url = urlWithoutSectionId + '#' + sectionId;
+    
     window.history.replaceState(null, null, url);
   }
 });
